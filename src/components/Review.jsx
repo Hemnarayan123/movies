@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import ReactStars from 'react-stars'
 import { reviewsRef, db } from '../firebase/firebase';
-import { addDoc, doc, updateDoc, getData } from 'firebase/firestore';
-import { TailSpin } from 'react-loader-spinner';
+import { addDoc, doc, updateDoc} from 'firebase/firestore';
+import { TailSpin, ThreeDots } from 'react-loader-spinner';
+
+
+
 import swal from 'sweetalert';
 
 function Review(id, prevRating, userRated) {
@@ -11,6 +14,7 @@ function Review(id, prevRating, userRated) {
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState("");
     const [data, setData] = useState()
+    const [reviewsLoading, setReviewLoading] = useState(true);
 
     const sendReview = async () =>{
         setLoading(true)
@@ -82,6 +86,15 @@ function Review(id, prevRating, userRated) {
             
             { loading ? <TailSpin height={25} color='white'/>:'Share'}
             </button>
+
+            {
+              reviewsLoading ?
+              <ThreeDots height={15} color='white'/> 
+              :
+              <div>
+
+              </div>
+            }
 
     </div>
   )
