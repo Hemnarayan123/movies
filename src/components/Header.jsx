@@ -18,7 +18,7 @@ function Header() {
       </h1>
       </Link>
       :
-      <Link to={'/login'}><h1 className='text-lg bg-red-600 cursor-pointer flex items-center'>
+      <Link to={'/login'}><h1 className='text-lg bg-red-600 rounded cursor-pointer flex items-center'>
         <Button><span className='text-white font-medium capitalize'>Login</span></Button>
       </h1>
       </Link>
