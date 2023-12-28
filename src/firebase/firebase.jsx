@@ -9,6 +9,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
   apiKey: "AIzaSyArY_sbVvqvRk7FaKovFjAQ4KrOkyMUJbo",
   authDomain: "flimverse.firebaseapp.com",
@@ -25,5 +26,6 @@ const auth = getAuth(app)
 export const db = getFirestore(app);
 export const movieRef = collection(db, "movies");
 export const reviewsRef = collection(db, "reviews")
+export const usersRef = collection(db, "users")
 
 export default app;

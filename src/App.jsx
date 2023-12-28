@@ -13,11 +13,8 @@ const Appstate = createContext();
 
 function App() {
 
-  const [count, setCount] = useState(0);
   const [login, setLogin] = useState(false);
   const [userName, setUserName] = useState("");
-
-  useEffect
 
   return (
   <Appstate.Provider value={{login, userName, setUserName, setLogin}}>
